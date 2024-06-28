@@ -1,8 +1,11 @@
-from langchain.document_loaders.pdf import PyPDFDirectoryLoader
+from langchain_community.document_loaders import PyPDFDirectoryLoader
+
 def load_documents():
     document_loader = PyPDFDirectoryLoader("data")
-    return document_loader.load()
+    documents = document_loader.load()
+    print("Documents loaded:", documents)  # Debug print
+    return documents
 
 # Call the function to load documents
 documents = load_documents()
-print(documents)
+print("Final documents output:", documents)
