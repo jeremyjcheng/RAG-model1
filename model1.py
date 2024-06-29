@@ -8,4 +8,4 @@ def load_documents():
 
 # Call the function to load documents
 documents = load_documents()
-print("Final documents output:", documents)
+print(documents[0])
